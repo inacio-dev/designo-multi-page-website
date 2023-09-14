@@ -1,0 +1,20 @@
+---
+import { Image } from 'astro:assets'
+
+import logoDark from '../assets/shared/desktop/logo-dark.png'
+import hamburgerIcon from '../assets/shared/mobile/icon-hamburger.svg'
+---
+
+<header class="h-24 md:h-[155px] flex items-center justify-between">
+  <Image src={logoDark} alt="Logomarca da designo" quality="high" width="202" />
+  <button class="md:hidden">
+    <Image src={hamburgerIcon} alt="" />
+  </button>
+  <nav class="hidden md:block">
+    <ul class="flex items-center gap-[42px]">
+      <li><a href="/" class="text-sm uppercase tracking-[2px] leading-[14px]">Our company</a></li>
+      <li><a href="/" class="text-sm uppercase tracking-[2px] leading-[14px]">Locations</a></li>
+      <li><a href="/" class="text-sm uppercase tracking-[2px] leading-[14px]">Contact</a></li>
+    </ul>
+  </nav>
+</header>

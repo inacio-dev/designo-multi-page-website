@@ -1,0 +1,49 @@
+---
+import { Image } from 'astro:assets'
+
+import phone from '../../assets/home/mobile/image-hero-phone.png'
+---
+
+<div
+  class="relative -mx-6 flex h-[843px] flex-col items-center overflow-hidden bg-peach pt-20 text-center text-white md:-mx-0 md:rounded-[15px] lg:h-[640px] lg:flex-row lg:items-start lg:justify-between lg:px-[95px] lg:pt-[139px] lg:text-left"
+>
+  <div class="absolute left-0 top-[102px] md:left-[unset] md:right-[-121.55px] lg:right-0 lg:top-0">
+    <svg width="640" height="639" xmlns="http://www.w3.org/2000/svg"
+      ><defs
+        ><linearGradient x1="0%" y1="50%" x2="100%" y2="50%" id="a"
+          ><stop stop-color="#5D0202" stop-opacity="0" offset="0%"></stop><stop
+            stop-color="#5D0202"
+            stop-opacity=".498"
+            offset="100%"></stop></linearGradient
+        ></defs
+      ><circle
+        fill="url(#a)"
+        transform="matrix(0 -1 -1 0 640 640)"
+        cx="320"
+        cy="320"
+        r="320"
+        fill-rule="evenodd"
+        opacity=".309"></circle></svg
+    >
+  </div>
+  <div class="relative flex flex-col items-center lg:items-start">
+    <h1
+      class="text-[32px] font-medium leading-[36px] md:max-w-[573px] md:text-[48px] md:leading-[48px]"
+    >
+      Award-winning custom designs and digital branding solutions
+    </h1>
+    <p
+      class="mt-3.5 max-w-[327px] text-[15px] leading-[25px] md:mt-8 md:max-w-[445px] md:text-base md:leading-[26px]"
+    >
+      With over 10 years in the industry, we are experienced in creating fully responsive websites,
+      app design, and engaging brand experiences. Find out more about our services.
+    </p>
+    <button
+      class="mt-6 inline-flex h-14 shrink-0 items-center justify-center rounded-lg bg-white px-6 text-[15px] font-medium uppercase tracking-[1px] text-dark-grey md:mt-[19px] lg:mt-10"
+      >Learn more</button
+    >
+  </div>
+  <div class="relative mt-20 md:mt-[69px] lg:mt-0">
+    <Image src={phone} alt="" width="284" />
+  </div>
+</div>
