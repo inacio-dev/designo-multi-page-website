@@ -9,54 +9,85 @@ import youtube from '../assets/shared/desktop/icon-youtube.svg'
 import logo from '../assets/shared/desktop/logo-light.png'
 ---
 
-<footer class="bg-black pt-[253px] pb-16 px-6 relative mt-[309px]">
-  <div class="bg-peach px-6 py-16 rounded-[15px] absolute top-[-189.5px] inset-x-0 mx-6">
-    <p class="font-medium text-[32px] leading-[36px] text-white text-center max-w-[279px]">
-      Let's talk about your project
-    </p>
-    <p class="text-center text-[15px] leading-[25px] text-white mt-1.5">
-      Ready to take it to the next level? Contact us today and find out how our expertise can help
-      your business grow.
-    </p>
+<footer
+  class="bg-black pt-[253px] md:pt-[166px] lg:pt-[144px] pb-16 relative mt-[309px] md:mt-[331px] lg:mt-[380px]"
+>
+  <div
+    class="bg-peach flex flex-col justify-center items-center rounded-[15px] px-6 absolute top-[-190px] inset-x-6 md:inset-x-10 xl:inset-x-0 h-[379px] md:h-[-350px] md:top-[-260px] lg:h-[292px] lg:top-[-220px] lg:flex-row lg:justify-between lg:max-w-[1111px] lg:mx-auto lg:px-[96px]"
+  >
+    <div class="flex flex-col items-center lg:items-start">
+      <p
+        class="font-medium text-[32px] leading-[36px] text-white text-center lg:text-start max-w-[279px] md:text-[40px] md:leading-[40px]"
+      >
+        Let's talk about your project
+      </p>
+      <p
+        class="text-center lg:text-start text-[15px] leading-[25px] text-white mt-1.5 md:max-w-[47ch] md:text-base md:leading-[26px]"
+      >
+        Ready to take it to the next level? Contact us today and find out how our expertise can help
+        your business grow.
+      </p>
+    </div>
     <div class="text-center">
       <button
-        class="h-14 bg-white inline-flex justify-center items-center text-black rounded-lg uppercase px-[18px] mt-8"
+        class="h-14 bg-white inline-flex justify-center items-center text-black rounded-lg uppercase px-[18px] mt-8 lg:mt-0 font-medium tracking-[1px]"
         >Get in touch</button
       >
     </div>
   </div>
-  <div class="flex justify-center">
-    <Image src={logo} alt="" width="202" />
-  </div>
-  <div class="w-full h-px bg-[#979797]/10 my-8"></div>
-  <nav>
-    <ul class="flex flex-col items-center text-white gap-8">
-      <li>
-        <a class="text-sm uppercase tracking-[2px] leading-[14px]">Our company</a>
-      </li>
-      <li>
-        <a class="text-sm uppercase tracking-[2px] leading-[14px]">Locations</a>
-      </li>
-      <li>
-        <a class="text-sm uppercase tracking-[2px] leading-[14px]">Contact</a>
-      </li>
-    </ul>
-  </nav>
-  <div class="mt-10 flex flex-col justify-center items-center text-white/50 leading-[26px]">
-    <p class="font-bold">Designo Central Office</p>
-    <p>3886 Wellington Street</p>
-    <p>Toronto, Ontario M9C 3J5</p>
-  </div>
-  <div class="mt-10 flex flex-col justify-center items-center text-white/50 leading-[26px]">
-    <p class="font-bold">Contact Us (Central Office)</p>
-    <p>P : +1 253-863-8967</p>
-    <p>M : contact@designo.co</p>
-  </div>
-  <div class="flex gap-4 justify-center mt-10">
-    <Image src={facebook} alt="Facebook" />
-    <Image src={youtube} alt="Youtube" />
-    <Image src={twitter} alt="Twitter" />
-    <Image src={pinterest} alt="Pinterest" />
-    <Image src={instagram} alt="Instagram" />
+  <div class="max-w-[1111px] mx-auto px-6">
+    <div class="flex justify-center md:justify-between md:items-center">
+      <Image src={logo} alt="" width="202" />
+      <nav class="hidden md:block">
+        <ul class="flex flex-row items-center text-white gap-8">
+          <li>
+            <a class="text-sm uppercase tracking-[2px] leading-[14px]">Our company</a>
+          </li>
+          <li>
+            <a class="text-sm uppercase tracking-[2px] leading-[14px]">Locations</a>
+          </li>
+          <li>
+            <a class="text-sm uppercase tracking-[2px] leading-[14px]">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="w-full h-px bg-[#979797]/10 my-8 md:mt-10 md:mb-[31px]"></div>
+    <nav class="md:hidden">
+      <ul class="flex flex-col items-center text-white gap-8">
+        <li>
+          <a class="text-sm uppercase tracking-[2px] leading-[14px]">Our company</a>
+        </li>
+        <li>
+          <a class="text-sm uppercase tracking-[2px] leading-[14px]">Locations</a>
+        </li>
+        <li>
+          <a class="text-sm uppercase tracking-[2px] leading-[14px]">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="mt-10 flex flex-col gap-10 md:flex-row md:items-end md:[&>*]:flex-1">
+      <div
+        class="flex flex-col justify-center items-center text-white/50 leading-[26px] md:items-start"
+      >
+        <p class="font-bold">Designo Central Office</p>
+        <p>3886 Wellington Street</p>
+        <p>Toronto, Ontario M9C 3J5</p>
+      </div>
+      <div
+        class="flex flex-col justify-center items-center text-white/50 leading-[26px] md:items-start"
+      >
+        <p class="font-bold">Contact Us (Central Office)</p>
+        <p>P : +1 253-863-8967</p>
+        <p>M : contact@designo.co</p>
+      </div>
+      <div class="flex gap-4 justify-center">
+        <Image src={facebook} alt="Facebook" />
+        <Image src={youtube} alt="Youtube" />
+        <Image src={twitter} alt="Twitter" />
+        <Image src={pinterest} alt="Pinterest" />
+        <Image src={instagram} alt="Instagram" />
+      </div>
+    </div>
   </div>
 </footer>
