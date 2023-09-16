@@ -1,0 +1,51 @@
+---
+import { Image } from 'astro:assets'
+
+import friendly from '../../assets/home/desktop/illustration-friendly.svg'
+import passionate from '../../assets/home/desktop/illustration-passionate.svg'
+import resourceful from '../../assets/home/desktop/illustration-resourceful.svg'
+---
+
+<section
+  class="py-[120px] flex flex-col lg:flex-row gap-20 md:gap-[32px] lg:gap-[30px] lg:max-w-[1110px] lg:mx-auto"
+>
+  <div class="flex flex-col md:flex-row lg:flex-col gap-12 items-center">
+    <Image src={passionate} alt="" />
+    <div
+      class="flex flex-col gap-8 md:gap-4 lg:gap-[32px] items-center md:items-start text-center md:text-start lg:items-center lg:text-center"
+    >
+      <h3 class="heading-3">Passionate</h3>
+      <p class="text-dark-grey">
+        Each project starts with an in-depth brand research to ensure we only create products that
+        serve a purpose. We merge art, design, and technology into exciting new solutions.
+      </p>
+    </div>
+  </div>
+
+  <div class="flex flex-col md:flex-row lg:flex-col gap-12 items-center">
+    <Image src={resourceful} alt="" />
+    <div
+      class="flex flex-col gap-8 md:gap-4 lg:gap-[32px] items-center md:items-start text-center md:text-start lg:items-center lg:text-center"
+    >
+      <h3 class="heading-3">Resourceful</h3>
+      <p class="text-dark-grey">
+        Everything that we do has a strategic purpose. We use an agile approach in all of our
+        projects and value customer collaboration. It guarantees superior results that fulfill our
+        clients’ needs.
+      </p>
+    </div>
+  </div>
+
+  <div class="flex flex-col md:flex-row lg:flex-col gap-12 items-center">
+    <Image src={friendly} alt="" />
+    <div
+      class="flex flex-col gap-8 md:gap-4 lg:gap-[32px] items-center md:items-start text-center md:text-start lg:items-center lg:text-center"
+    >
+      <h3 class="heading-3">Friendly</h3>
+      <p class="text-dark-grey">
+        We are a group of enthusiastic folks who know how to put people first. Our success depends
+        on our customers, and we strive to give them the best experience a company can provide.
+      </p>
+    </div>
+  </div>
+</section>
