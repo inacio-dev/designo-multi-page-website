@@ -1,22 +1,19 @@
 ---
 import { getImage } from 'astro:assets'
 
-import appDesignDesktop from '../../assets/home/desktop/image-app-design.jpg'
 import graphicDesignDesktop from '../../assets/home/desktop/image-graphic-design.jpg'
-// Desktop
-import webDesignDesktop from '../../assets/home/desktop/image-web-design-large.jpg'
-import appDesignMobile from '../../assets/home/mobile/image-app-design.jpg'
+import webDesignDesktop from '../../assets/home/desktop/image-web-design-small.jpg'
 import graphicDesignMobile from '../../assets/home/mobile/image-graphic-design.jpg'
-// Mobile
+// Desktop
 import webDesignMobile from '../../assets/home/mobile/image-web-design.jpg'
-import appDesignTablet from '../../assets/home/tablet/image-app-design.jpg'
 import graphicDesignTablet from '../../assets/home/tablet/image-graphic-design.jpg'
-// Table
+// Mobile
 import webDesignTablet from '../../assets/home/tablet/image-web-design.jpg'
+
+// Table
 
 // Mobile
 const webDesignMobileOpt = await getImage({ src: webDesignMobile, format: 'avif', quality: 'low' })
-const appDesignMobileOpt = await getImage({ src: appDesignMobile, format: 'avif', quality: 'low' })
 const graphicDesignMobileOpt = await getImage({
   src: graphicDesignMobile,
   format: 'avif',
@@ -24,8 +21,7 @@ const graphicDesignMobileOpt = await getImage({
 })
 
 // Tablet
-const webDesignTabletOpt = await getImage({ src: webDesignTablet, format: 'avif' })
-const appDesignTabletOpt = await getImage({ src: appDesignTablet, format: 'avif', quality: 'low' })
+const webDesignTabletOpt = await getImage({ src: webDesignTablet, format: 'avif', quality: 'low' })
 const graphicDesignTabletOpt = await getImage({
   src: graphicDesignTablet,
   format: 'avif',
@@ -33,9 +29,8 @@ const graphicDesignTabletOpt = await getImage({
 })
 
 // Desktop
-const webDesignDesktopOpt = await getImage({ src: webDesignDesktop, format: 'avif' })
-const appDesignDesktopOpt = await getImage({
-  src: appDesignDesktop,
+const webDesignDesktopOpt = await getImage({
+  src: webDesignDesktop,
   format: 'avif',
   quality: 'low',
 })
@@ -48,7 +43,7 @@ const graphicDesignDesktopOpt = await getImage({
 
 <section class="pt-[120px]">
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-x-[30px]">
-    <div class="grid-stack rounded-[15px] overflow-hidden lg:row-span-2">
+    <a href="/web-design" class="grid-stack rounded-[15px] overflow-hidden">
       <picture>
         <source
           media="(max-width: 767px)"
@@ -84,45 +79,8 @@ const graphicDesignDesktopOpt = await getImage({
         </p>
         <p class="text-[15px] tracking-[5px] font-medium uppercase">View projects</p>
       </div>
-    </div>
-    <div class="grid-stack rounded-[15px] overflow-hidden">
-      <picture>
-        <source
-          media="(max-width: 767px)"
-          srcset={appDesignMobileOpt.src}
-          width={appDesignMobileOpt.attributes.width}
-          height={appDesignMobileOpt.attributes.height}
-        />
-        <source
-          media="(min-width: 1100px)"
-          srcset={appDesignDesktopOpt.src}
-          width={appDesignDesktopOpt.attributes.width}
-          height={appDesignDesktopOpt.attributes.height}
-        />
-        <source
-          media="(min-width: 768px)"
-          srcset={appDesignTabletOpt.src}
-          width={appDesignTabletOpt.attributes.width}
-          height={appDesignTabletOpt.attributes.height}
-        />
-        <img
-          src={appDesignDesktopOpt.src}
-          alt=""
-          width={appDesignDesktopOpt.attributes.width}
-          height={appDesignDesktopOpt.attributes.height}
-          class="w-full"
-        />
-      </picture>
-      <div class="bg-black/80 text-white flex justify-center items-center flex-col gap-3">
-        <p
-          class="text-[28px] leading-[36px] md:text-[40px] md:leading-[48px] md:tracking-[2px] tracking-[1.4px] font-medium uppercase"
-        >
-          App design
-        </p>
-        <p class="text-[15px] tracking-[5px] font-medium uppercase">View projects</p>
-      </div>
-    </div>
-    <div class="grid-stack rounded-[15px] overflow-hidden">
+    </a>
+    <a href="/graphic-design" class="grid-stack rounded-[15px] overflow-hidden">
       <picture>
         <source
           media="(max-width: 767px)"
@@ -158,6 +116,6 @@ const graphicDesignDesktopOpt = await getImage({
         </p>
         <p class="text-[15px] tracking-[5px] font-medium uppercase">View projects</p>
       </div>
-    </div>
+    </a>
   </div>
 </section>

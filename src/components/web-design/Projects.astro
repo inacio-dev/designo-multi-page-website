@@ -1,0 +1,59 @@
+---
+import { Image } from 'astro:assets'
+
+import express from '../../assets/web-design/desktop/image-express.jpg'
+import transfer from '../../assets/web-design/desktop/image-transfer.jpg'
+import photon from '../../assets/web-design/desktop/image-photon.jpg'
+import builder from '../../assets/web-design/desktop/image-builder.jpg'
+import blogr from '../../assets/web-design/desktop/image-blogr.jpg'
+import camp from '../../assets/web-design/desktop/image-camp.jpg'
+
+const projects = [
+  {
+    title: 'Express',
+    description: 'A multi-carrier shipping website for ecommerce businesses',
+    imgSrc: express,
+  },
+  {
+    title: 'Transfer',
+    description: 'Site for low-cost money transfers and sending money within seconds',
+    imgSrc: transfer
+  },
+  {
+    title: 'Photon',
+    description: 'A state-of-the-art music player with high-resolution audio and DSP effects',
+    imgSrc: photon,
+  },
+  {
+    title: 'Builder',
+    description: 'Connects users with local contractors based on their location',
+    imgSrc: builder,
+  },
+  {
+    title: 'Blogr',
+    description: 'Blogr is a platform for creating an online blog or publication',
+    imgSrc: blogr,
+  },
+  {
+    title: 'Camp',
+    description: 'Get expert training in coding, data, design, and digital marketing',
+    imgSrc: camp,
+  },
+]
+---
+
+<section class="mt-24 md:mt-[120px] lg:mt-[160px]">
+  <ul class="grid grid-cols-1 lg:grid-cols-3 gap-10 md:gap-8 lg:gap-[30px]">
+    {
+      projects.map((project) => (
+        <li class="rounded-[15px] overflow-hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1">
+          <Image src={project.imgSrc} alt='' />
+          <div class="bg-[#FDF3F0] flex flex-col justify-center items-center py-8 gap-4">
+          <h3 class="heading-3 text-peach">{project.title}</h3>
+          <p class="text-center max-w-[33ch]">{project.description}</p>
+          </div>
+        </li>
+      ))
+    }
+  </ul>
+</section>

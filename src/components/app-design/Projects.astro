@@ -1,0 +1,53 @@
+---
+import { Image } from 'astro:assets'
+
+import airfilter from '../../assets/app-design/desktop/image-airfilter.jpg'
+import eyecam from '../../assets/app-design/desktop/image-eyecam.jpg'
+import faceit from '../../assets/app-design/desktop/image-faceit.jpg'
+import loopstudios from '../../assets/app-design/desktop/image-loopstudios.jpg'
+import todo from '../../assets/app-design/desktop/image-todo.jpg'
+
+const projects = [
+  {
+    title: 'Airfilter',
+    description: 'Solving the problem of poor indoor air quality by filtering the air',
+    imgSrc: airfilter,
+  },
+  {
+    title: 'Eyecam',
+    description: 'Product that lets you edit your favorite photos and videos at any time',
+    imgSrc: eyecam,
+  },
+  {
+    title: 'Faceit',
+    description: 'Get to meet your favorite internet superstar with the faceit app',
+    imgSrc: faceit,
+  },
+  {
+    title: 'Todo',
+    description: 'A todo app that features cloud sync with light and dark mode',
+    imgSrc: todo,
+  },
+  {
+    title: 'Loopstudios',
+    description: 'A VR experience app made for Loopstudios',
+    imgSrc: loopstudios,
+  },
+]
+---
+
+<section class="mt-24 md:mt-[120px] lg:mt-[160px]">
+  <ul class="grid grid-cols-1 lg:grid-cols-3 gap-10 md:gap-8 lg:gap-[30px]">
+    {
+      projects.map((project) => (
+        <li class="rounded-[15px] overflow-hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1">
+          <Image src={project.imgSrc} alt="" />
+          <div class="bg-[#FDF3F0] flex flex-col justify-center items-center py-8 gap-4 h-[158px]">
+            <h3 class="heading-3 text-peach">{project.title}</h3>
+            <p class="text-center max-w-[33ch]">{project.description}</p>
+          </div>
+        </li>
+      ))
+    }
+  </ul>
+</section>

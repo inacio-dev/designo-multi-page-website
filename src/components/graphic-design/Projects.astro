@@ -1,0 +1,41 @@
+---
+import { Image } from 'astro:assets'
+
+import boxedWater from '../../assets/graphic-design/desktop/image-boxed-water.jpg'
+import change from '../../assets/graphic-design/desktop/image-change.jpg'
+import science from '../../assets/graphic-design/desktop/image-science.jpg'
+
+const projects = [
+  {
+    title: 'Tim Brown',
+    description: 'A book cover designed for Tim Brown’s new release, ‘Change’',
+    imgSrc: change,
+  },
+  {
+    title: 'Boxed Water',
+    description: 'A simple packaging concept made for Boxed Water',
+    imgSrc: boxedWater,
+  },
+  {
+    title: 'Science!',
+    description: 'A poster made in collaboration with the Federal Art Project',
+    imgSrc: science,
+  },
+]
+---
+
+<section class="mt-24 md:mt-[120px] lg:mt-[160px]">
+  <ul class="grid grid-cols-1 lg:grid-cols-3 gap-10 md:gap-8 lg:gap-[30px]">
+    {
+      projects.map((project) => (
+        <li class="rounded-[15px] overflow-hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1">
+          <Image src={project.imgSrc} alt="" />
+          <div class="bg-[#FDF3F0] flex flex-col justify-center items-center py-8 gap-4 h-[158px]">
+            <h3 class="heading-3 text-peach">{project.title}</h3>
+            <p class="text-center max-w-[33ch]">{project.description}</p>
+          </div>
+        </li>
+      ))
+    }
+  </ul>
+</section>

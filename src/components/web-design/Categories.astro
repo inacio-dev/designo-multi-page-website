@@ -4,18 +4,15 @@ import { getImage } from 'astro:assets'
 import appDesignDesktop from '../../assets/home/desktop/image-app-design.jpg'
 import graphicDesignDesktop from '../../assets/home/desktop/image-graphic-design.jpg'
 // Desktop
-import webDesignDesktop from '../../assets/home/desktop/image-web-design-large.jpg'
 import appDesignMobile from '../../assets/home/mobile/image-app-design.jpg'
 import graphicDesignMobile from '../../assets/home/mobile/image-graphic-design.jpg'
 // Mobile
-import webDesignMobile from '../../assets/home/mobile/image-web-design.jpg'
 import appDesignTablet from '../../assets/home/tablet/image-app-design.jpg'
 import graphicDesignTablet from '../../assets/home/tablet/image-graphic-design.jpg'
+
 // Table
-import webDesignTablet from '../../assets/home/tablet/image-web-design.jpg'
 
 // Mobile
-const webDesignMobileOpt = await getImage({ src: webDesignMobile, format: 'avif', quality: 'low' })
 const appDesignMobileOpt = await getImage({ src: appDesignMobile, format: 'avif', quality: 'low' })
 const graphicDesignMobileOpt = await getImage({
   src: graphicDesignMobile,
@@ -24,7 +21,6 @@ const graphicDesignMobileOpt = await getImage({
 })
 
 // Tablet
-const webDesignTabletOpt = await getImage({ src: webDesignTablet, format: 'avif' })
 const appDesignTabletOpt = await getImage({ src: appDesignTablet, format: 'avif', quality: 'low' })
 const graphicDesignTabletOpt = await getImage({
   src: graphicDesignTablet,
@@ -33,7 +29,6 @@ const graphicDesignTabletOpt = await getImage({
 })
 
 // Desktop
-const webDesignDesktopOpt = await getImage({ src: webDesignDesktop, format: 'avif' })
 const appDesignDesktopOpt = await getImage({
   src: appDesignDesktop,
   format: 'avif',
@@ -48,44 +43,7 @@ const graphicDesignDesktopOpt = await getImage({
 
 <section class="pt-[120px]">
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-x-[30px]">
-    <div class="grid-stack rounded-[15px] overflow-hidden lg:row-span-2">
-      <picture>
-        <source
-          media="(max-width: 767px)"
-          srcset={webDesignMobileOpt.src}
-          width={webDesignMobileOpt.attributes.width}
-          height={webDesignMobileOpt.attributes.height}
-        />
-        <source
-          media="(min-width: 1100px)"
-          srcset={webDesignDesktopOpt.src}
-          width={webDesignDesktopOpt.attributes.width}
-          height={webDesignDesktopOpt.attributes.height}
-        />
-        <source
-          media="(min-width: 768px)"
-          srcset={webDesignTabletOpt.src}
-          width={webDesignTabletOpt.attributes.width}
-          height={webDesignTabletOpt.attributes.height}
-        />
-        <img
-          src={webDesignDesktopOpt.src}
-          alt=""
-          width={webDesignDesktopOpt.attributes.width}
-          height={webDesignDesktopOpt.attributes.height}
-          class="w-full"
-        />
-      </picture>
-      <div class="bg-black/80 text-white flex justify-center items-center flex-col gap-3">
-        <p
-          class="text-[28px] leading-[36px] md:text-[40px] md:leading-[48px] md:tracking-[2px] tracking-[1.4px] font-medium uppercase"
-        >
-          Web design
-        </p>
-        <p class="text-[15px] tracking-[5px] font-medium uppercase">View projects</p>
-      </div>
-    </div>
-    <div class="grid-stack rounded-[15px] overflow-hidden">
+    <a href="/app-design" class="grid-stack rounded-[15px] overflow-hidden">
       <picture>
         <source
           media="(max-width: 767px)"
@@ -121,8 +79,8 @@ const graphicDesignDesktopOpt = await getImage({
         </p>
         <p class="text-[15px] tracking-[5px] font-medium uppercase">View projects</p>
       </div>
-    </div>
-    <div class="grid-stack rounded-[15px] overflow-hidden">
+    </a>
+    <a href="/graphic-design" class="grid-stack rounded-[15px] overflow-hidden">
       <picture>
         <source
           media="(max-width: 767px)"
@@ -158,6 +116,6 @@ const graphicDesignDesktopOpt = await getImage({
         </p>
         <p class="text-[15px] tracking-[5px] font-medium uppercase">View projects</p>
       </div>
-    </div>
+    </a>
   </div>
 </section>

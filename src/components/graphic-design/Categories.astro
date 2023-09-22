@@ -1,0 +1,117 @@
+---
+import { getImage } from 'astro:assets'
+
+import appDesignDesktop from '../../assets/home/desktop/image-app-design.jpg'
+import webDesignDesktop from '../../assets/home/desktop/image-web-design-small.jpg'
+import appDesignMobile from '../../assets/home/mobile/image-app-design.jpg'
+import webDesignMobile from '../../assets/home/mobile/image-web-design.jpg'
+import appDesignTablet from '../../assets/home/tablet/image-app-design.jpg'
+import webDesignTablet from '../../assets/home/tablet/image-web-design.jpg'
+
+// Mobile
+const webDesignMobileOpt = await getImage({ src: webDesignMobile, format: 'avif', quality: 'low' })
+const appDesignMobileOpt = await getImage({
+  src: appDesignMobile,
+  format: 'avif',
+  quality: 'low',
+})
+
+// Tablet
+const webDesignTabletOpt = await getImage({ src: webDesignTablet, format: 'avif', quality: 'low' })
+const appDesignTabletOpt = await getImage({
+  src: appDesignTablet,
+  format: 'avif',
+  quality: 'low',
+})
+
+// Desktop
+const webDesignDesktopOpt = await getImage({
+  src: webDesignDesktop,
+  format: 'avif',
+  quality: 'low',
+})
+const appDesignDesktopOpt = await getImage({
+  src: appDesignDesktop,
+  format: 'avif',
+  quality: 'low',
+})
+---
+
+<section class="pt-[120px]">
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-x-[30px]">
+    <a href="/app-design" class="grid-stack rounded-[15px] overflow-hidden">
+      <picture>
+        <source
+          media="(max-width: 767px)"
+          srcset={appDesignMobileOpt.src}
+          width={appDesignMobileOpt.attributes.width}
+          height={appDesignMobileOpt.attributes.height}
+        />
+        <source
+          media="(min-width: 1100px)"
+          srcset={appDesignDesktopOpt.src}
+          width={appDesignDesktopOpt.attributes.width}
+          height={appDesignDesktopOpt.attributes.height}
+        />
+        <source
+          media="(min-width: 768px)"
+          srcset={appDesignTabletOpt.src}
+          width={appDesignTabletOpt.attributes.width}
+          height={appDesignTabletOpt.attributes.height}
+        />
+        <img
+          src={appDesignDesktopOpt.src}
+          alt=""
+          width={appDesignDesktopOpt.attributes.width}
+          height={appDesignDesktopOpt.attributes.height}
+          class="w-full"
+        />
+      </picture>
+      <div class="bg-black/80 text-white flex justify-center items-center flex-col gap-3">
+        <p
+          class="text-[28px] leading-[36px] md:text-[40px] md:leading-[48px] md:tracking-[2px] tracking-[1.4px] font-medium uppercase"
+        >
+          App design
+        </p>
+        <p class="text-[15px] tracking-[5px] font-medium uppercase">View projects</p>
+      </div>
+    </a>
+    <a href="/web-design" class="grid-stack rounded-[15px] overflow-hidden">
+      <picture>
+        <source
+          media="(max-width: 767px)"
+          srcset={webDesignMobileOpt.src}
+          width={webDesignMobileOpt.attributes.width}
+          height={webDesignMobileOpt.attributes.height}
+        />
+        <source
+          media="(min-width: 1100px)"
+          srcset={webDesignDesktopOpt.src}
+          width={webDesignDesktopOpt.attributes.width}
+          height={webDesignDesktopOpt.attributes.height}
+        />
+        <source
+          media="(min-width: 768px)"
+          srcset={webDesignTabletOpt.src}
+          width={webDesignTabletOpt.attributes.width}
+          height={webDesignTabletOpt.attributes.height}
+        />
+        <img
+          src={webDesignDesktopOpt.src}
+          alt=""
+          width={webDesignDesktopOpt.attributes.width}
+          height={webDesignDesktopOpt.attributes.height}
+          class="w-full"
+        />
+      </picture>
+      <div class="bg-black/80 text-white flex justify-center items-center flex-col gap-3">
+        <p
+          class="text-[28px] leading-[36px] md:text-[40px] md:leading-[48px] md:tracking-[2px] tracking-[1.4px] font-medium uppercase"
+        >
+          Web design
+        </p>
+        <p class="text-[15px] tracking-[5px] font-medium uppercase">View projects</p>
+      </div>
+    </a>
+  </div>
+</section>
