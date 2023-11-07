@@ -46,9 +46,9 @@ const graphicDesignDesktopOpt = await getImage({
 })
 ---
 
-<section class="pt-[120px]">
+<section class="pt-[120px] z-10">
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-x-[30px]">
-    <div class="grid-stack rounded-[15px] overflow-hidden lg:row-span-2">
+    <a href="/web-design" class="grid-stack rounded-[15px] overflow-hidden lg:row-span-2">
       <picture>
         <source
           media="(max-width: 767px)"
@@ -76,7 +76,9 @@ const graphicDesignDesktopOpt = await getImage({
           class="w-full"
         />
       </picture>
-      <div class="bg-black/80 text-white flex justify-center items-center flex-col gap-3">
+      <div
+        class="bg-black/80 hover:bg-[#E7816B]/80 transition-colors duration-300 text-white flex justify-center items-center flex-col gap-3"
+      >
         <p
           class="text-[28px] leading-[36px] md:text-[40px] md:leading-[48px] md:tracking-[2px] tracking-[1.4px] font-medium uppercase"
         >
@@ -84,8 +86,8 @@ const graphicDesignDesktopOpt = await getImage({
         </p>
         <p class="text-[15px] tracking-[5px] font-medium uppercase">View projects</p>
       </div>
-    </div>
-    <div class="grid-stack rounded-[15px] overflow-hidden">
+    </a>
+    <a href="/app-design" class="grid-stack rounded-[15px] overflow-hidden">
       <picture>
         <source
           media="(max-width: 767px)"
@@ -113,7 +115,9 @@ const graphicDesignDesktopOpt = await getImage({
           class="w-full"
         />
       </picture>
-      <div class="bg-black/80 text-white flex justify-center items-center flex-col gap-3">
+      <div
+        class="bg-black/80 hover:bg-[#E7816B]/80 transition-colors duration-300 text-white flex justify-center items-center flex-col gap-3"
+      >
         <p
           class="text-[28px] leading-[36px] md:text-[40px] md:leading-[48px] md:tracking-[2px] tracking-[1.4px] font-medium uppercase"
         >
@@ -121,8 +125,8 @@ const graphicDesignDesktopOpt = await getImage({
         </p>
         <p class="text-[15px] tracking-[5px] font-medium uppercase">View projects</p>
       </div>
-    </div>
-    <div class="grid-stack rounded-[15px] overflow-hidden">
+    </a>
+    <a href="/graphic-design" class="grid-stack rounded-[15px] overflow-hidden">
       <picture>
         <source
           media="(max-width: 767px)"
@@ -150,7 +154,9 @@ const graphicDesignDesktopOpt = await getImage({
           class="w-full"
         />
       </picture>
-      <div class="bg-black/80 text-white flex justify-center items-center flex-col gap-3">
+      <div
+        class="bg-black/80 hover:bg-[#E7816B]/80 transition-colors duration-300 text-white flex justify-center items-center flex-col gap-3"
+      >
         <p
           class="text-[28px] leading-[36px] md:text-[40px] md:leading-[48px] md:tracking-[2px] tracking-[1.4px] font-medium uppercase"
         >
@@ -158,6 +164,6 @@ const graphicDesignDesktopOpt = await getImage({
         </p>
         <p class="text-[15px] tracking-[5px] font-medium uppercase">View projects</p>
       </div>
-    </div>
+    </a>
   </div>
 </section>

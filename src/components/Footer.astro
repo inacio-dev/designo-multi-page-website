@@ -29,9 +29,10 @@ import logo from '../assets/shared/desktop/logo-light.png'
       </p>
     </div>
     <div class="text-center">
-      <button
-        class="h-14 bg-white inline-flex justify-center items-center text-black rounded-lg uppercase px-[18px] mt-8 lg:mt-0 font-medium tracking-[1px]"
-        >Get in touch</button
+      <a
+        href="/contact"
+        class="h-14 bg-white transition-colors duration-300 hover:bg-[#FFAD9B] hover:text-white inline-flex justify-center items-center text-black rounded-lg uppercase px-[18px] mt-8 lg:mt-0 font-medium tracking-[1px]"
+        >Get in touch</a
       >
     </div>
   </div>
@@ -41,13 +42,21 @@ import logo from '../assets/shared/desktop/logo-light.png'
       <nav class="hidden md:block">
         <ul class="flex flex-row items-center text-white gap-8">
           <li>
-            <a class="text-sm uppercase tracking-[2px] leading-[14px]">Our company</a>
+            <a href="/" class="text-sm uppercase tracking-[2px] leading-[14px] hover:underline"
+              >Our company</a
+            >
           </li>
           <li>
-            <a class="text-sm uppercase tracking-[2px] leading-[14px]">Locations</a>
+            <a
+              href="/locations"
+              class="text-sm uppercase tracking-[2px] leading-[14px] hover:underline">Locations</a
+            >
           </li>
           <li>
-            <a class="text-sm uppercase tracking-[2px] leading-[14px]">Contact</a>
+            <a
+              href="/contact"
+              class="text-sm uppercase tracking-[2px] leading-[14px] hover:underline">Contact</a
+            >
           </li>
         </ul>
       </nav>

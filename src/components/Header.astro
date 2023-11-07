@@ -2,19 +2,44 @@
 import { Image } from 'astro:assets'
 
 import logoDark from '../assets/shared/desktop/logo-dark.png'
+import closeIcon from '../assets/shared/mobile/icon-close.svg'
 import hamburgerIcon from '../assets/shared/mobile/icon-hamburger.svg'
+import Dialog from './Dialog'
 ---
 
 <header class="h-24 md:h-[155px] flex items-center justify-between">
   <Image src={logoDark} alt="Logomarca da designo" quality="high" width="202" />
-  <button class="md:hidden">
-    <Image src={hamburgerIcon} alt="" />
-  </button>
+
+  <Dialog client:media="(max-width: 768px)">
+    <Image
+      src={hamburgerIcon}
+      alt="logo"
+      class="group-data-[state=open]:hidden group-data-[state=closed]:block"
+    />
+    <Image
+      src={closeIcon}
+      alt="logo"
+      class="group-data-[state=open]:block group-data-[state=closed]:hidden"
+    />
+  </Dialog>
+
   <nav class="hidden md:block">
     <ul class="flex items-center gap-[42px]">
-      <li><a href="/" class="text-sm uppercase tracking-[2px] leading-[14px]">Our company</a></li>
-      <li><a href="/" class="text-sm uppercase tracking-[2px] leading-[14px]">Locations</a></li>
-      <li><a href="/" class="text-sm uppercase tracking-[2px] leading-[14px]">Contact</a></li>
+      <li>
+        <a href="/" class="text-sm uppercase tracking-[2px] leading-[14px] hover:underline"
+          >Our company</a
+        >
+      </li>
+      <li>
+        <a href="/locations" class="text-sm uppercase tracking-[2px] leading-[14px] hover:underline"
+          >Locations</a
+        >
+      </li>
+      <li>
+        <a href="/contact" class="text-sm uppercase tracking-[2px] leading-[14px] hover:underline"
+          >Contact</a
+        >
+      </li>
     </ul>
   </nav>
 </header>

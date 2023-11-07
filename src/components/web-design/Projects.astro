@@ -1,12 +1,12 @@
 ---
 import { Image } from 'astro:assets'
 
-import express from '../../assets/web-design/desktop/image-express.jpg'
-import transfer from '../../assets/web-design/desktop/image-transfer.jpg'
-import photon from '../../assets/web-design/desktop/image-photon.jpg'
-import builder from '../../assets/web-design/desktop/image-builder.jpg'
 import blogr from '../../assets/web-design/desktop/image-blogr.jpg'
+import builder from '../../assets/web-design/desktop/image-builder.jpg'
 import camp from '../../assets/web-design/desktop/image-camp.jpg'
+import express from '../../assets/web-design/desktop/image-express.jpg'
+import photon from '../../assets/web-design/desktop/image-photon.jpg'
+import transfer from '../../assets/web-design/desktop/image-transfer.jpg'
 
 const projects = [
   {
@@ -17,7 +17,7 @@ const projects = [
   {
     title: 'Transfer',
     description: 'Site for low-cost money transfers and sending money within seconds',
-    imgSrc: transfer
+    imgSrc: transfer,
   },
   {
     title: 'Photon',
@@ -46,11 +46,15 @@ const projects = [
   <ul class="grid grid-cols-1 lg:grid-cols-3 gap-10 md:gap-8 lg:gap-[30px]">
     {
       projects.map((project) => (
-        <li class="rounded-[15px] overflow-hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1">
-          <Image src={project.imgSrc} alt='' />
-          <div class="bg-[#FDF3F0] flex flex-col justify-center items-center py-8 gap-4">
-          <h3 class="heading-3 text-peach">{project.title}</h3>
-          <p class="text-center max-w-[33ch]">{project.description}</p>
+        <li class="rounded-[15px] group overflow-hidden grid grid-cols-1 md:grid-cols-2 hover:cursor-pointer lg:grid-cols-1">
+          <Image src={project.imgSrc} alt="" />
+          <div class="bg-[#FDF3F0] group-hover:bg-peach duration-300 transition-colors flex flex-col justify-center items-center py-8 gap-4">
+            <h3 class="heading-3 text-peach group-hover:text-white duration-300 transition-colors">
+              {project.title}
+            </h3>
+            <p class="text-center max-w-[33ch] group-hover:text-white duration-300 transition-colors">
+              {project.description}
+            </p>
           </div>
         </li>
       ))

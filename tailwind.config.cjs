@@ -17,6 +17,25 @@ module.exports = {
         'dark-grey': 'hsl(264 5% 20%)',
         'light-grey': 'hsl(210 17% 95%)',
       },
+      keyframes: {
+        'content-show': {
+          from: { opacity: 0, transform: 'translateY(-20px)' },
+          to: { opacity: 1, transform: 'translateY(0)' },
+        },
+        'slide-down': {
+          from: { height: 0 },
+          to: { height: 'var(--radix-accordion-content-height)' },
+        },
+        'slide-up': {
+          from: { height: 'var(--radix-accordion-content-height)' },
+          to: { height: 0 },
+        },
+      },
+      animation: {
+        'content-show': 'content-show 150ms cubic-bezier(0.16, 1, 0.3, 1)',
+        'slide-down': 'slide-down 600ms cubic-bezier(0.87, 0, 0.13, 1)',
+        'slide-up': 'slide-up 600ms cubic-bezier(0.87, 0, 0.13, 1)',
+      },
     },
   },
   plugins: [

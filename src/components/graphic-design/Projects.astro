@@ -28,11 +28,15 @@ const projects = [
   <ul class="grid grid-cols-1 lg:grid-cols-3 gap-10 md:gap-8 lg:gap-[30px]">
     {
       projects.map((project) => (
-        <li class="rounded-[15px] overflow-hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1">
+        <li class="rounded-[15px] group hover:cursor-pointer overflow-hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1">
           <Image src={project.imgSrc} alt="" />
-          <div class="bg-[#FDF3F0] flex flex-col justify-center items-center py-8 gap-4 h-[158px]">
-            <h3 class="heading-3 text-peach">{project.title}</h3>
-            <p class="text-center max-w-[33ch]">{project.description}</p>
+          <div class="bg-[#FDF3F0] group-hover:bg-peach duration-300 transition-colors flex flex-col justify-center items-center py-8 gap-4">
+            <h3 class="heading-3 text-peach group-hover:text-white duration-300 transition-colors">
+              {project.title}
+            </h3>
+            <p class="text-center max-w-[33ch] group-hover:text-white duration-300 transition-colors">
+              {project.description}
+            </p>
           </div>
         </li>
       ))
