@@ -13,11 +13,12 @@ import Layout from '../layouts/Layout.astro'
       class="col-span-1 lg:col-span-2 relative bg-[#FDF3F0] max-h-[375px] md:max-h-[326px] w-full min-h-[375px] md:min-h-[326px] rounded-none md:rounded-[15px] overflow-hidden justify-center items-center flex"
     >
       123
+      <div class="grid grid-cols-1 md:grid-cols-2"></div>
     </div>
     <div
       class="overflow-hidden h-full max-h-[375px] md:max-h-[326px] w-full rounded-none md:rounded-[15px]"
     >
-      <Image src={Australia} alt="" />
+      <Image src={Australia} alt="" class="lg:h-full w-full h-auto lg:w-auto" />
     </div>
   </div>
 </Layout>
