@@ -2,6 +2,8 @@
 import { Image } from 'astro:assets'
 
 import Australia from '../assets/locations/image-map-australia.png'
+import Canada from '../assets/locations/image-map-canada.png'
+import United from '../assets/locations/image-map-united.png'
 import Layout from '../layouts/Layout.astro'
 ---
 
@@ -10,15 +12,126 @@ import Layout from '../layouts/Layout.astro'
     class="grid grid-cols-1 lg:grid-cols-3 max-w-[1111px] mx-auto w-full px-0 md:px-10 xl:px-0 gap-0 md:gap-8"
   >
     <div
-      class="col-span-1 lg:col-span-2 relative bg-[#FDF3F0] max-h-[375px] md:max-h-[326px] w-full min-h-[375px] md:min-h-[326px] rounded-none md:rounded-[15px] overflow-hidden justify-center items-center flex"
+      class="hidden lg:flex flex-col px-0 md:px-16 lg:px-24 items-center md:items-start justify-center col-span-1 lg:col-span-2 relative bg-[#FDF3F0] max-h-[375px] md:max-h-[326px] w-full min-h-[375px] md:min-h-[326px] rounded-none md:rounded-[15px] overflow-hidden"
     >
-      123
-      <div class="grid grid-cols-1 md:grid-cols-2"></div>
+      <h2 class="text-[32px] md:text-[40px] text-[#E7816B] font-medium pb-6">Canada</h2>
+
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 w-full text-[#333136] text-[15px] md:text-base space-y-6 md:space-y-0"
+      >
+        <div class="flex flex-col w-full text-center md:text-start">
+          <h3 class="font-bold">Designo Central Office</h3>
+          <p>3886 Wellington Street</p>
+          <p>Toronto, Ontario M9C 3J5</p>
+        </div>
+
+        <div class="flex flex-col w-full text-center md:text-start">
+          <h3 class="font-bold">Contact</h3>
+          <p>P : +1 253-863-8967</p>
+          <p>M : contact@designo.co</p>
+        </div>
+      </div>
     </div>
     <div
       class="overflow-hidden h-full max-h-[375px] md:max-h-[326px] w-full rounded-none md:rounded-[15px]"
     >
+      <Image src={Canada} alt="" class="lg:h-full w-full h-auto lg:w-auto" />
+    </div>
+    <div
+      class="flex mb-10 md:mb-0 lg:hidden flex-col px-0 md:px-16 lg:px-24 items-center md:items-start justify-center col-span-1 lg:col-span-2 relative bg-[#FDF3F0] max-h-[375px] md:max-h-[326px] w-full min-h-[375px] md:min-h-[326px] rounded-none md:rounded-[15px] overflow-hidden"
+    >
+      <h2 class="text-[32px] md:text-[40px] text-[#E7816B] font-medium pb-6">Canada</h2>
+
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 w-full text-[#333136] text-[15px] md:text-base space-y-6 md:space-y-0"
+      >
+        <div class="flex flex-col w-full text-center md:text-start">
+          <h3 class="font-bold">Designo Central Office</h3>
+          <p>3886 Wellington Street</p>
+          <p>Toronto, Ontario M9C 3J5</p>
+        </div>
+
+        <div class="flex flex-col w-full text-center md:text-start">
+          <h3 class="font-bold">Contact</h3>
+          <p>P : +1 253-863-8967</p>
+          <p>M : contact@designo.co</p>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="overflow-hidden h-full max-h-[375px] md:max-h-[326px] w-full rounded-none md:rounded-[15px]"
+    >
       <Image src={Australia} alt="" class="lg:h-full w-full h-auto lg:w-auto" />
+    </div>
+    <div
+      class="flex mb-10 md:mb-0 flex-col px-0 md:px-16 lg:px-24 items-center md:items-start justify-center col-span-1 lg:col-span-2 relative bg-[#FDF3F0] max-h-[375px] md:max-h-[326px] w-full min-h-[375px] md:min-h-[326px] rounded-none md:rounded-[15px] overflow-hidden"
+    >
+      <h2 class="text-[32px] md:text-[40px] text-[#E7816B] font-medium pb-6">Australia</h2>
+
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 w-full text-[#333136] text-[15px] md:text-base space-y-6 md:space-y-0"
+      >
+        <div class="flex flex-col w-full text-center md:text-start">
+          <h3 class="font-bold">Designo AU Office</h3>
+          <p>19 Balonne Street</p>
+          <p>New South Wales 2443</p>
+        </div>
+
+        <div class="flex flex-col w-full text-center md:text-start">
+          <h3 class="font-bold">Contact</h3>
+          <p>P : (02) 6720 9092</p>
+          <p>M : contact@designo.au</p>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="hidden lg:flex flex-col px-0 md:px-16 lg:px-24 items-center md:items-start justify-center col-span-1 lg:col-span-2 relative bg-[#FDF3F0] max-h-[375px] md:max-h-[326px] w-full min-h-[375px] md:min-h-[326px] rounded-none md:rounded-[15px] overflow-hidden"
+    >
+      <h2 class="text-[32px] md:text-[40px] text-[#E7816B] font-medium pb-6">United Kingdom</h2>
+
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 w-full text-[#333136] text-[15px] md:text-base space-y-6 md:space-y-0"
+      >
+        <div class="flex flex-col w-full text-center md:text-start">
+          <h3 class="font-bold">Designo UK Office</h3>
+          <p>13 Colorado Way</p>
+          <p>Rhyd-y-fro SA8 9GA</p>
+        </div>
+
+        <div class="flex flex-col w-full text-center md:text-start">
+          <h3 class="font-bold">Contact</h3>
+          <p>P : 078 3115 1400</p>
+          <p>M : contact@designo.uk</p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="overflow-hidden h-full max-h-[375px] md:max-h-[326px] w-full rounded-none md:rounded-[15px]"
+    >
+      <Image src={United} alt="" class="lg:h-full w-full h-auto lg:w-auto" />
+    </div>
+    <div
+      class="flex lg:hidden flex-col px-0 md:px-16 lg:px-24 items-center md:items-start justify-center col-span-1 lg:col-span-2 relative bg-[#FDF3F0] max-h-[375px] md:max-h-[326px] w-full min-h-[375px] md:min-h-[326px] rounded-none md:rounded-[15px] overflow-hidden"
+    >
+      <h2 class="text-[32px] md:text-[40px] text-[#E7816B] font-medium pb-6">United Kingdom</h2>
+
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 w-full text-[#333136] text-[15px] md:text-base space-y-6 md:space-y-0"
+      >
+        <div class="flex flex-col w-full text-center md:text-start">
+          <h3 class="font-bold">Designo UK Office</h3>
+          <p>13 Colorado Way</p>
+          <p>Rhyd-y-fro SA8 9GA</p>
+        </div>
+
+        <div class="flex flex-col w-full text-center md:text-start">
+          <h3 class="font-bold">Contact</h3>
+          <p>P : 078 3115 1400</p>
+          <p>M : contact@designo.uk</p>
+        </div>
+      </div>
     </div>
   </div>
 </Layout>
