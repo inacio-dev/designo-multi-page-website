@@ -1,5 +1,6 @@
 ---
 import { Image } from 'astro:assets'
+import clsx from 'clsx'
 
 import facebook from '../assets/shared/desktop/icon-facebook.svg'
 import instagram from '../assets/shared/desktop/icon-instagram.svg'
@@ -10,7 +11,12 @@ import logo from '../assets/shared/desktop/logo-light.png'
 ---
 
 <footer
-  class="bg-black pt-[253px] md:pt-[166px] lg:pt-[144px] pb-16 relative mt-[309px] md:mt-[331px] lg:mt-[380px]"
+  class={clsx(
+    'bg-black pb-16 relative',
+    Astro.url.pathname !== '/contact'
+      ? 'pt-[253px] md:pt-[166px] lg:pt-[144px] mt-[309px] md:mt-[331px] lg:mt-[380px]'
+      : 'pt-[64px] md:pt-[80px] lg:pt-[72px] mt-[120px] lg:mt-[160px]',
+  )}
 >
   {
     Astro.url.pathname !== '/contact' && (
