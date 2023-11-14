@@ -1,6 +1,6 @@
 # Coffeeroasters Subscription Site
 
-This repository contains the implementation of a functional coffee subscription website, created according to the design guidelines provided in the [Frontend Mentor challenge](https://www.frontendmentor.io/challenges/coffeeroasters-subscription-site-5Fc26HVY6). The project was developed using the Astro framework and is fully responsive, adapting to any screen size.
+This repository contains the implementation of a functional designo multi-page website, created according to the design guidelines provided in the [Frontend Mentor challenge](https://www.frontendmentor.io/challenges/designo-multipage-website-G48K6rfUT/hub). The project was developed using the Astro framework and is fully responsive, adapting to any screen size.
 
 ## Table of contents
 
@@ -32,7 +32,7 @@ Follow the steps below to set up and run the project on your local environment:
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/inacio-dev/coffeeroasters-subscription-site.git
+   git clone https://github.com/inacio-dev/designo-multi-page-website.git
    ```
 
 2. Navigate to the project directory:
@@ -61,7 +61,7 @@ The site will be available at [http://localhost:4321](http://localhost:4321/).
 
 ## Deploy on Vercel
 
-This project is deployed on Vercel. You can access the live site at [Vercel deploy](https://in-dev-coffeeroasters-subscription-site.vercel.app/).
+This project is deployed on Vercel. You can access the live site at [Vercel deploy](https://in-dev-designo-multi-page-website.vercel.app/).
 
 ## Project Structure
 
@@ -134,9 +134,9 @@ We use Prettier and ESLint for code formatting in this project to ensure consist
 
 ## Want to learn more?
 
-During this project, I learned how to work with a new framework called Astro. Additionally, I gained experience in managing images using the features provided by the Astro framework. It was a valuable learning experience that expanded my skillset as a developer.
+During this new challenge, I furthered my skills by leveraging the new Astro framework, while also delving deeper into image optimization techniques. 
 
-I also learned how to optimize images using art direction, which allowed me to deliver a better user experience by serving different image versions based on the user's device and screen size.
+Additionally, I mastered the art of optimizing images using art direction, enabling the delivery of enhanced user experiences by serving diverse image versions based on user devices and screen sizes. This experience proved invaluable, significantly enriching my skill set as a developer.
 
 ## Contribution
 
