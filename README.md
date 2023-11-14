@@ -1,54 +1,153 @@
-# Astro Starter Kit: Basics
+# Coffeeroasters Subscription Site
 
+This repository contains the implementation of a functional coffee subscription website, created according to the design guidelines provided in the [Frontend Mentor challenge](https://www.frontendmentor.io/challenges/coffeeroasters-subscription-site-5Fc26HVY6). The project was developed using the Astro framework and is fully responsive, adapting to any screen size.
+
+## Table of contents
+
+- [Technologies Used](#technologies-used)
+- [Deploy on Vercel](#deploy-on-vercel)
+- [Getting Started](#getting-started)
+- [Project Structure](#project-structure)
+- [Using Astro](#using-astro)
+- [Code Formatting](#code-formatting)
+- [Want to learn more?](#want-to-learn-more)
+- [Contribution](#contribution)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
+
+## Technologies Used
+
+- HTML
+- JavaScript
+- Tailwind CSS
+- Astro
+- TypeScript
+- EsLint
+- Prettier
+
+## Getting Started
+
+Follow the steps below to set up and run the project on your local environment:
+
+1. Clone this repository:
+
+   ```bash
+   git clone https://github.com/inacio-dev/coffeeroasters-subscription-site.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd coffeeroasters-subscription-site
+   ```
+
+3. Install dependencies using one of the following package managers (choose one):
+
+   ```bash
+   npm install
+   yarn install
+   pnpm install
+   ```
+
+4. After installing dependencies, start the project:
+
+   ```bash
+   npm start
+   yarn start
+   pnpm start
+   ```
+
+The site will be available at [http://localhost:4321](http://localhost:4321/).
+
+## Deploy on Vercel
+
+This project is deployed on Vercel. You can access the live site at [Vercel deploy](https://in-dev-coffeeroasters-subscription-site.vercel.app/).
+
+## Project Structure
+
+Inside your Astro project, you'll see the following folders and files:
+
+```bash
+   /
+   ├── public/
+   ├── src/
+   │ ├── assets/
+   │ ├── components/
+   │ ├── layouts/
+   │ └── pages/
+   └── package.json
 ```
-npm create astro@latest -- --template basics
-```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+Astro looks for .astro or .md files in the src/pages/ directory. Each page is exposed as a route based on its file name.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+There's nothing special about src/components/, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+Any static assets, like images, can be placed in the public/ directory.
 
-## 🚀 Project Structure
+## Using Astro
 
-Inside of your Astro project, you'll see the following folders and files:
+This project was built using the Astro framework. If you're new to Astro and want to learn more about how to use it, follow these steps:
 
-```
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+1. Install Astro globally (if you haven't already):
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+   ```bash
+      npm install -g astro
+   ```
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+2. Create a new Astro project using the basics template:
 
-Any static assets, like images, can be placed in the `public/` directory.
+   ```bash
+      npm create astro@latest -- --template basics
+   ```
 
-## 🧞 Commands
+3. Start your Astro project locally:
 
-All commands are run from the root of the project, from a terminal:
+   ```bash
+      npm run dev
+   ```
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+Your Astro project will be available at http://localhost:3000.
 
-## 👀 Want to learn more?
+4. To build your production site, run:
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+   ```bash
+      npm run build
+   ```
+
+5. For more information and advanced usage of Astro, refer to the [Astro documentation](https://docs.astro.build/).
+
+## Code Formatting
+
+We use Prettier and ESLint for code formatting in this project to ensure consistent and clean code. You can format your code using the following commands:
+
+- Format all JavaScript and TypeScript files:
+
+  ```bash
+     npm run format
+  ```
+
+- Check for code formatting issues:
+
+  ```bash
+     npm run lint
+  ```
+
+## Want to learn more?
+
+During this project, I learned how to work with a new framework called Astro. Additionally, I gained experience in managing images using the features provided by the Astro framework. It was a valuable learning experience that expanded my skillset as a developer.
+
+I also learned how to optimize images using art direction, which allowed me to deliver a better user experience by serving different image versions based on the user's device and screen size.
+
+## Contribution
+
+You can contribute to this project by opening issues, suggesting improvements, or creating pull requests. Feel free to contact the project author directly on GitHub or through [Frontend Mentor](https://www.frontendmentor.io/profile/inacio-dev).
+
+## Author
+
+- GitHub: [Inácio Rodrigues](https://github.com/inacio-dev)
+- Email: inaciormgalvao@gmail.com
+- Website: [Portfolio](https://inacio-rodrigues.vercel.app/en)
+
+## Acknowledgments
+
+This project benefited from the contributions of [João Pedro Magalhães](https://github.com/joaom00), who participated as a member of the [GitHub organization](https://github.com/inacio-teams).
